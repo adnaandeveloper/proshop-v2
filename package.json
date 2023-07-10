@@ -11,6 +11,7 @@
   "main": "server.js",
   "dependencies": {
     "ansi-styles": "^3.2.1",
+    "bcryptjs": "^2.4.3",
     "browserslist": "^4.21.8",
     "caniuse-lite": "^1.0.30001503",
     "chalk": "^2.4.2",
@@ -30,6 +31,7 @@
     "jsesc": "^2.5.2",
     "json5": "^2.2.3",
     "lru-cache": "^5.1.1",
+    "mongoose": "^7.3.1",
     "ms": "^2.1.2",
     "node-releases": "^2.0.12",
     "picocolors": "^1.0.0",
@@ -43,7 +45,9 @@
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d"
   },
   "author": "Adnaan",
   "license": "MIT"
