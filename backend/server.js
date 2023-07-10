@@ -33,9 +33,6 @@ app.get("/api/products/:id", (req, res) => {
  */
 
 app.use("/api/products", productRoutes);
-//app.use(notFoundHandler);
-//app.use(errorHandler);
-
 app.use(notFound);
 
 app.use(errorHandler);
